@@ -4,7 +4,7 @@ var request = require('request');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  var url = 'https://codetest.hwahae.co.kr/3';
+  var url = '';
   var result = [];
 
   request(url, function(err, resp, body){
