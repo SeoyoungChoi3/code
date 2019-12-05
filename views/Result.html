@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link href="stylesheets/result.css" rel="stylesheet" type="text/css" media="all">
+    {% raw %}
+    <script id="tmpl" type="text/x-jquery-tmpl">
+      <tr>
+        <td>${index1}-${index2}</td>
+        <td>${obj1}</td>
+        <td>${obj2}</td>
+      </tr>
+    </script>
+    {% endraw %}
+  </head>
+  <body>
+    <div id="contents">
+      <select name="filter" placeholder="filter">
+        <option value="">filter</option>
+      </select>
+    <table id="mainTable">
+      <thead>
+        <tr>
+          <th>matched</th>
+          <th>left</th>
+          <th>right</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  </body>
+</html>
+<script type="text/javascript" src="javascripts/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="javascripts/jq_Result.js"></script>
+<script>
+  var result = {{resultArray|json_encode}};
+</script>
